@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap and CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- SVG icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="whatsapp" viewBox="0 0 32 32">
+        <path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"/>    
+      </symbol>
+      <symbol id="instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      </symbol>
+      <symbol id="gmail" viewBox="0 0 24 24">
+        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>    </symbol>
+      <symbol id="github" viewBox="0 0 512 499.36">
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/>
+      </symbol>
+    </svg>
+
+    <title>Portfolio | Putra Nurhuda Makatita</title>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top" style="background-color: #dfa804">
+      <div class="container">
+        <!-- <p class="navbar-brand p-0" href="#">My Portfolio</p> -->
+        <div class="dropdown">
+          <a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            My Portfolio
+          </a>
+          <ul class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuLink">
+            Certifications:
+            <li><a target="_blank" class="dropdown-item" href="https://freecodecamp.org/certification/putranmakatita/javascript-algorithms-and-data-structures">Javascript Algorithms and Data Structures</a></li>
+            <li><a target="_blank" class="dropdown-item" href="https://freecodecamp.org/certification/putranmakatita/scientific-computing-with-python-v7">Scientific Computing with Python</a></li>
+            <li><a target="_blank" class="dropdown-item" href="https://freecodecamp.org/certification/putranmakatita/back-end-development-and-apis">Back End Development and APIs</a></li>
+            <li><a target="_blank" class="dropdown-item" href="https://freecodecamp.org/certification/putranmakatita/responsive-web-design">Responsive Web Design</a></li>
+          </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#jumbotron">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <section id="jumbotron" style="background-color: #ffe28b">
+        <div class="container pt-4">
+            <img class="d-block mx-auto py-4 mb-4" src="images/Putra_Nbg.png" alt="Foto profil pemilik site" width="160" style="border-radius: 50%;">
+            <h1 class="display-10 fw-bold text-center">Putra N. Makatita</h1>
+            <p class="lead mb-4 text-center">Web & Computer Programmer</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff6da" fill-opacity="1" d="M0,224L0,256L36.9,256L36.9,0L73.8,0L73.8,192L110.8,192L110.8,288L147.7,288L147.7,64L184.6,64L184.6,32L221.5,32L221.5,128L258.5,128L258.5,288L295.4,288L295.4,64L332.3,64L332.3,224L369.2,224L369.2,160L406.2,160L406.2,128L443.1,128L443.1,32L480,32L480,192L516.9,192L516.9,128L553.8,128L553.8,320L590.8,320L590.8,32L627.7,32L627.7,64L664.6,64L664.6,32L701.5,32L701.5,224L738.5,224L738.5,128L775.4,128L775.4,160L812.3,160L812.3,128L849.2,128L849.2,0L886.2,0L886.2,0L923.1,0L923.1,128L960,128L960,192L996.9,192L996.9,288L1033.8,288L1033.8,32L1070.8,32L1070.8,224L1107.7,224L1107.7,256L1144.6,256L1144.6,160L1181.5,160L1181.5,192L1218.5,192L1218.5,64L1255.4,64L1255.4,160L1292.3,160L1292.3,192L1329.2,192L1329.2,64L1366.2,64L1366.2,160L1403.1,160L1403.1,320L1440,320L1440,320L1403.1,320L1403.1,320L1366.2,320L1366.2,320L1329.2,320L1329.2,320L1292.3,320L1292.3,320L1255.4,320L1255.4,320L1218.5,320L1218.5,320L1181.5,320L1181.5,320L1144.6,320L1144.6,320L1107.7,320L1107.7,320L1070.8,320L1070.8,320L1033.8,320L1033.8,320L996.9,320L996.9,320L960,320L960,320L923.1,320L923.1,320L886.2,320L886.2,320L849.2,320L849.2,320L812.3,320L812.3,320L775.4,320L775.4,320L738.5,320L738.5,320L701.5,320L701.5,320L664.6,320L664.6,320L627.7,320L627.7,320L590.8,320L590.8,320L553.8,320L553.8,320L516.9,320L516.9,320L480,320L480,320L443.1,320L443.1,320L406.2,320L406.2,320L369.2,320L369.2,320L332.3,320L332.3,320L295.4,320L295.4,320L258.5,320L258.5,320L221.5,320L221.5,320L184.6,320L184.6,320L147.7,320L147.7,320L110.8,320L110.8,320L73.8,320L73.8,320L36.9,320L36.9,320L0,320L0,320Z"></path></svg>
+        </div>
+    </section>
+
+    <!-- Jumbotron -->
+    <section id="about" style="background-color: #fff6da">
+    <div class="container pt-4" >
+        <div class="row">
+            <div class="col-sm text-center">
+                <h1 class="display-6 fst-italic">About me</h1>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm">
+                <p class="text-break">Saya adalah Web developer otodidak yang sangat antusias terhadap teknologi <em>computing</em>. Awal keminatan saya terhadap dunia <em>programming</em> diawali dengan ketertarikan saya dengan ide yang tertuang mengenai AI dalam buku Origin karya Dan Brown.</p>
+            </div>
+            <div class="col-sm">
+                <p class="text-break">Saya selalu melihat kemungkinan bahwa kecerdasan manusia dapat diturunkan kepada sesuatu yang bukan manusia merupakan hal yang mendekati sihir.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" style="background-color: #ffe28b;">
+        <div class="row pt-4">
+            <div class="col">
+                <h1 class="display-10 fw-bold text-center">My Boring Projects</h1>
+            </div>
+        </div>
+        <div class="row align-items-center m-auto pt-3">
+            <div class="col-md-4 mb-3">
+            <div class="card" style="width: 18rem;">
+                <img src="images/weatherReport.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">weatherReport</h5>
+                    <p class="card-text">Ingin mendapat laporan cuaca terkini dari seluruh dunia?</p>
+                    <a target="_blank" href="https://putranmakatita.github.io/Weather-Report/" class="btn btn-primary">Kunjungi!</a>
+                  </div>
+            </div>
+            </div>
+            <div class="col-md-4 mb-3">
+            <div class="card" style="width: 18rem;">
+                <img src="images/movieInfoSearcher.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">movieInfoSearcher</h5>
+                    <p class="card-text">Aplikasi Web untuk menemukan informasi mengenai film favorit</p>
+                    <a target="_blank" href="https://putranmakatita.github.io/movieInfoSearcher/" class="btn btn-primary">Kunjungi!</a>
+                  </div>
+            </div>
+            </div>
+            <div class="col-md-4 mb-3">
+             <div class="card" style="width: 18rem;">
+                <img src="images/secondBrand.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">secondBrand!</h5>
+                    <p class="card-text">Bisnis mikro milik kawan yang siap digunakan untuk keperluan publish informasi seputar stok toko</p>
+                    <a target="_blank" href="https://putranmakatita.github.io/secondBrand-/" class="btn btn-primary">Kunjungi!</a>
+                  </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact me -->
+    <section id="contact">
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <img src="/images/leviathan.png" alt="" width=50>
+            </a>
+            <span class="text-muted">© 2022 putranmakatita</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-light" target="_blank" style="fill: blue !important;" href="https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBtHNWBgHFdHdptfsQRJFVCW?compose=CllgCJNvvsPxCVRHLgzrtWpndptFSJfFfhBHpgjtXdVfvsVfwSLTQVftxdHsMKjrMVwbCxQPcQB""><svg class="bi" width="24" height="24"><use xlink:href="#gmail"></use></svg></a></li>
+            <li class="ms-3"><a class="text-light" target="_blank" style="fill: blue !important;" href="https://www.instagram.com/putranmakatita/"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-light" target="_blank" style="fill: blue !important;" href="https://api.whatsapp.com/send?phone=6289604300702&text=Hallo%20kak%20Putra!"><svg class="bi" width="30" height="30"><use xlink:href="#whatsapp"></use></svg></a></li>
+            <li class="ms-3"><a class="text-light" target="_blank" style="fill: blue !important;" href="https://github.com/putranmakatita"><svg class="bi" width="24" height="24"><use xlink:href="#github"></use></svg></a></li>
+            <!-- <a class="ms-3" href="https://github.com/twbs" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+                  <small class="d-md-none ms-2">GitHub</small>
+                </a> -->
+          </ul>
+        </footer>
+      </div>
+      
+        <!--
+            <a class="nav-link" href="#">
+              <img height="50px" alt="Twitter" src="https://cdn-icons-png.flaticon.com/512/124/124021.png">
+            </a>
+
+             -->
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>
