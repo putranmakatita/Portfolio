@@ -90,6 +90,31 @@
             <a class="nav-link js-scroll-trigger eng-ver" href="#services">Services</a>
             <a class="nav-link js-scroll-trigger ind-ver" hidden href="#services">Pelayanan</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle eng-ver" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Certifications
+            </a>
+            <a class="nav-link dropdown-toggle ind-ver" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" hidden>
+              Sertifikat
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a target="_blank" class="dropdown-item"
+                href="https://freecodecamp.org/certification/putranmakatita/javascript-algorithms-and-data-structures">Javascript
+                Algorithms and Data Structures</a>
+              <a target="_blank" class="dropdown-item"
+                href="https://freecodecamp.org/certification/putranmakatita/scientific-computing-with-python-v7">Scientific
+                Computing with Python</a>
+              <a target="_blank" class="dropdown-item"
+                href="https://freecodecamp.org/certification/putranmakatita/back-end-development-and-apis">Back End
+                Development and APIs</a>
+              <a target="_blank" class="dropdown-item"
+                href="https://freecodecamp.org/certification/putranmakatita/responsive-web-design">Responsive Web
+                Design</a>
+            </div>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger eng-ver" href="#portfolio">Portfolio</a>
             <a class="nav-link js-scroll-trigger ind-ver" hidden href="#portfolio">Portofolio</a>
@@ -740,6 +765,24 @@
   <script src="js/jquery.vide.js"></script>
 
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Get the "Certificates" link and child items
+    const certificatesLink = document.querySelector('.nav-link.eng-ver');
+    const childItems = document.querySelector('.child-items');
+
+    // Hide the child items initially
+    childItems.style.display = 'none';
+
+    // Add a click event listener to toggle visibility of the child items
+    certificatesLink.addEventListener('click', function () {
+      if (childItems.style.display === 'none') {
+        childItems.style.display = 'block';
+      } else {
+        childItems.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 
 </html>
